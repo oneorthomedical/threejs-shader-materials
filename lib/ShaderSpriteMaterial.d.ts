@@ -31,22 +31,10 @@ export declare abstract class ShaderSpriteMaterial extends ShaderMaterial {
      * @deprecated Use uniformOpacity, To be removed in version 0.3.0
      * @see https://github.com/microsoft/TypeScript/pull/37894
      */
-    get opacity(): number;
-    /**
-     * 透明度
-     */
     get uniformOpacity(): number;
     /**
      * 透明度
      * @deprecated Use uniformOpacity, To be removed in version 0.3.0
-     * @param value
-     */
-    set opacity(value: number);
-    /**
-     * 透明度
-     * opacityは基底クラスのMaterialのコンストラクタ内で明示的に1.0が代入される。
-     * この段階でuniformsはundefinedなので、そのままでは初期化できない。
-     * このsetterでは受け取った値をprivate変数に保存して、初期化後にuniformsに再代入する。
      * @param value
      */
     set uniformOpacity(value: number);
